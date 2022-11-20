@@ -33,4 +33,4 @@ spec:
        memory: {{.Values.deployment.resources.limits.memory}}
        cpu: {{.Values.deployment.resources.limits.cpu}}
      ports:
-     - containerPort: {{.Values.Deployment.containerPort}}
+     - containerPort: {{.Values.deployment.containerPort}}

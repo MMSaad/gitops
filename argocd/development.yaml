@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: gitops-development
@@ -10,8 +10,8 @@ spec:
    path: helm
    targetRevision: HEAD
    helm:
-    valuesFiles:
-     values.yaml
+    valueFiles:
+     - values.yaml
   destination:
    server: https://kubernetes.default.svc
    namespace: gitops-development
