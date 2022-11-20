@@ -12,25 +12,25 @@ spec:
   metadata:
    labels:
     app: {{.Values.deployment.label}}
- spec:
-  containers:
-   - name: {{.Values.deployment.label}}
-     image: {{.Values.deployment.repository }}:{{ .Values.deployment.version }}
-     pullPolicy: {{.Values.deployment.pullPolicy}}
-     livenessProbe:
-      httpGet:
-       path: {{.Values.deployment.livenessProbe.path}}
-       port: {{.Values.deployment.livenessProbe.port}}
-     readinessProbe:
-      httpGet:
-       path: {{.Values.deployment.readinessProbe.path}}
-       port: {{.Values.deployment.readinessProbe.port}}
-     resources:
-      requests:
-       memory: {{.Values.deployment.resources.requests.memory}}
-       cpu: {{.Values.deployment.resources.requests.cpu}}
-      limits:
-       memory: {{.Values.deployment.resources.limits.memory}}
-       cpu: {{.Values.deployment.resources.limits.cpu}}
-     ports:
-     - containerPort: {{.Values.deployment.containerPort}}
+  spec:
+   containers:
+    - name: {{.Values.deployment.label}}
+      image: {{.Values.deployment.repository }}:{{ .Values.deployment.version }}
+      pullPolicy: {{.Values.deployment.pullPolicy}}
+      livenessProbe:
+       httpGet:
+        path: {{.Values.deployment.livenessProbe.path}}
+        port: {{.Values.deployment.livenessProbe.port}}
+      readinessProbe:
+       httpGet:
+        path: {{.Values.deployment.readinessProbe.path}}
+        port: {{.Values.deployment.readinessProbe.port}}
+      resources:
+       requests:
+        memory: {{.Values.deployment.resources.requests.memory}}
+        cpu: {{.Values.deployment.resources.requests.cpu}}
+       limits:
+        memory: {{.Values.deployment.resources.limits.memory}}
+        cpu: {{.Values.deployment.resources.limits.cpu}}
+      ports:
+      - containerPort: {{.Values.deployment.containerPort}}
