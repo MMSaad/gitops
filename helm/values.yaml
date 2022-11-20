@@ -4,7 +4,7 @@ namespace:
 
 deployment:
   name: gitops
-  replicas: 3
+  replicas: 2
   label: gitops
   repository: mmsaad85/gitops
   version: 1.0.0
