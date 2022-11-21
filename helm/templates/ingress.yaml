@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Ingress
-metadata:
- name: {{.Values.ingress.name}}
- namespace: {{.Values.namespace.name}}
-spec:
- rules:
-  - host: 
- 
