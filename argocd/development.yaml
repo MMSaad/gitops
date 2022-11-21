@@ -13,7 +13,7 @@ spec:
     valueFiles:
      - values.yaml
     parameters:
-          - name: image.tag
+          - name: deployment.version
             value: $ARGOCD_APP_REVISION
   destination:
    server: https://kubernetes.default.svc
