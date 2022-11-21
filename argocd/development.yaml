@@ -12,9 +12,9 @@ spec:
    helm:
     valueFiles:
     - values.yaml
-    # parameters:
-    # - name: deployment.version
-    #   value: $ARGOCD_APP_REVISION
+    parameters:
+    - name: deployment.version
+      value: $ARGOCD_APP_REVISION
   destination:
    server: https://kubernetes.default.svc
    namespace: gitops-development
