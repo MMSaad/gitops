@@ -14,7 +14,7 @@ spec:
     - values.yaml
     parameters:
     - name: deployment.version
-      value: $ARGOCD_APP_REVISION
+      value: 1.0.0
   destination:
    server: https://kubernetes.default.svc
    namespace: gitops-development
