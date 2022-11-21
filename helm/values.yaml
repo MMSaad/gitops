@@ -7,7 +7,7 @@ deployment:
   replicas: 2
   label: gitops
   repository: mmsaad85/gitops
-  version: ${{ github.sha }}
+  version: latest
   pullPolicy: Always
   livenessProbe:
     path: /api/home
