@@ -7,7 +7,7 @@ deployment:
   replicas: 2
   label: gitops
   repository: mmsaad85/gitops
-  version: latest
+  version: $ARGOCD_APP_REVISION
   pullPolicy: Always
   livenessProbe:
     path: /api/home
